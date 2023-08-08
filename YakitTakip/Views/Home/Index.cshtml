@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="bg-primary col-md-3 col-sm-12">
+                @Html.Partial("../Shared/PartialViews/aside")
+            </div>
+            <section class="col-md-9 col-sm-12">
+                <article>
+                    @Html.Partial("../Shared/PartialViews/section")
+                </article>
+            </section>
+        </div>
+    </div>
+</main>

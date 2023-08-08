@@ -1,0 +1,22 @@
+﻿@model List<YakitTakip.Models.TbPersonel>
+<table>
+    <tr>
+        <td>AD</td>
+        <td>SOYAD</td>
+        <td>TELEFON NUMARASI</td>
+    </tr>
+    @{
+        foreach (var item in Model)
+        {
+        <tr>
+             <td>@item.Ad</td>
+             <td>@item.Soyad</td>
+             <td>@item.TelefonNo</td>
+             <td>
+                <button type="button" class="btn btn-danger">Sil</button>
+                <button type="button" class="btn btn-warning">Güncelle</button>
+             </td>
+         </tr>
+        }
+    }
+</table>

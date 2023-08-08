@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IQueryable<YakitTakip.Models.TbPersonel>
+<main>
+    <h3>Personel</h3>
+    <div class="container">
+        <div class="row">
+            <div class="bg-primary col-md-3 col-sm-12">
+                @Html.Partial("../Shared/PartialViews/aside")
+            </div>
+            <section class="col-md-9 col-sm-12">
+                <article>
+                    <table>
+                        <tr>
+                            <td>AD</td>
+                            <td>SOYAD</td>
+                            <td>TELEFON NUMARASI</td>
+                        </tr>
+                        @{
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Ad</td>
+                                    <td>@item.Soyad</td>
+                                    <td>@item.TelefonNo</td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger">Sil</button>
+                                        <button type="button" class="btn btn-warning">Güncelle</button>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </table>
+                </article>
+            </section>
+        </div>
+    </div>
+</main>
