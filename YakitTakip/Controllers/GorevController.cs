@@ -16,7 +16,7 @@ namespace YakitTakip.Controllers
         }
         public IActionResult Index()
         {
-            return View(_gorevReadRepository.GetAll());
+            return View(_gorevReadRepository.GetAll().Include(p => p.Personel).Include(a=>a.Arac)); ;
         }
     }
 }

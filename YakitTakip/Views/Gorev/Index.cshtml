@@ -15,8 +15,9 @@
                 <article>
                     <table>
                         <tr>
-                            <td>Personel Adı Soyadı</td>
-                            <td>Arac</td>
+                            <td>Personel Adı</td>
+                            <td>Personel Soyadı</td>
+                            <td>Araç Plakası</td>
                             <td>Gorev Başlanğıç  Tarihi</td>
                             <td>Gorev Sonu Tarihi</td>
                         </tr>
@@ -24,8 +25,9 @@
                             foreach (var item in Model)
                             {
                                 <tr>
-                                    <td>@item.PersonelId</td>
-                                    <td>@item.AracId</td>
+                                    <td>@item.Personel.Ad</td>
+                                    <td>@item.Personel.Soyad</td>
+                                    <td>@item.Arac.Plaka</td>
                                     <td>@item.GorevBaslangicTarihi</td>
                                     <td>@item.GorevSonuTarihi</td>
                                     <td>
