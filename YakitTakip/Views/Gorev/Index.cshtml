@@ -2,9 +2,10 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@model IQueryable<YakitTakip.Models.TbPersonel>
+@using YakitTakip.IRepository.Personel
+@model IQueryable<YakitTakip.Models.TbGorev>
 <main>
-    <h3>Personel</h3>
+    <h3>Gorev</h3>
     <div class="container">
         <div class="row">
             <div class="bg-primary col-md-3 col-sm-12">
@@ -14,21 +15,19 @@
                 <article>
                     <table>
                         <tr>
-                            <td>AD</td>
-                            <td>SOYAD</td>
-                            <td>TELEFON NUMARASI</td>
-                            <td>İlk Kayıt Tarihi</td>
-                            <td>Son Kayıt Tarihi</td>
+                            <td>Personel Adı Soyadı</td>
+                            <td>Arac</td>
+                            <td>Gorev Başlanğıç  Tarihi</td>
+                            <td>Gorev Sonu Tarihi</td>
                         </tr>
                         @{
                             foreach (var item in Model)
                             {
                                 <tr>
-                                    <td>@item.Ad</td>
-                                    <td>@item.Soyad</td>
-                                    <td>@item.TelefonNo</td>
-                                    <td>@item.IlkKayitTarihi</td>
-                                    <td>@item.SonKayitTarihi</td>
+                                    <td>@item.PersonelId</td>
+                                    <td>@item.AracId</td>
+                                    <td>@item.GorevBaslangicTarihi</td>
+                                    <td>@item.GorevSonuTarihi</td>
                                     <td>
                                         <button type="button" class="btn btn-danger">Sil</button>
                                         <button type="button" class="btn btn-warning">Güncelle</button>

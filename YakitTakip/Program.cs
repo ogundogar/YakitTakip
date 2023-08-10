@@ -1,10 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using YakitTakip.IRepository;
 using YakitTakip.IRepository.Arac;
+using YakitTakip.IRepository.Gorev;
 using YakitTakip.IRepository.Personel;
 using YakitTakip.Models;
 using YakitTakip.Repository;
 using YakitTakip.Repository.Arac;
+using YakitTakip.Repository.Gorev;
 using YakitTakip.Repository.Personel;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +15,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<DbYakitTakipContext>();
 builder.Services.AddScoped<IPersonelReadRepository,PersonelReadRepository>();
+builder.Services.AddScoped<IGorevReadRepository, GorevReadRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

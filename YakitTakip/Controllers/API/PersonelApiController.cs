@@ -14,10 +14,15 @@ namespace YakitTakip.Controllers.API
         {
             _personelReadRepository = personelReadRepository;
         }
+        //[HttpGet]
+        //public IQueryable<TbPersonel> Get()
+        //{
+        //    return _personelReadRepository.GetWhere(p => p.Ad == "Nihat");
+        //}
         [HttpGet]
         public IQueryable<TbPersonel> Get()
         {
-            return _personelReadRepository.GetWhere(p => p.Ad == "Nihat");
+            return _personelReadRepository.GetAll();
         }
 
     }

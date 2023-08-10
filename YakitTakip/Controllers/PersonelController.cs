@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using YakitTakip.IRepository.Personel;
-using YakitTakip.Models;
 
 namespace YakitTakip.Controllers
 {
