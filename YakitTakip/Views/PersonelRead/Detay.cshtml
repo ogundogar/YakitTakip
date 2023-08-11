@@ -2,7 +2,7 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@model IQueryable<YakitTakip.Models.TbPersonel>
 <main>
     <div class="container">
         <div class="row">
@@ -11,7 +11,13 @@
             </div>
             <section class="col-md-9 col-sm-12">
                 <article>
-                    @Html.Partial("../Shared/PartialViews/section")
+                   @foreach (var item in Model)
+                    {
+                        <h1>Adı Soyadı : @item.Ad @item.Soyad</h1>
+                        <h2>Telefon Numarası : @item.TelefonNo</h2>
+                        <h3>İlk Kayıt Tarihi : @item.IlkKayitTarihi</h3>
+                        <h3>Son Kayit Tarihi : @item?.SonKayitTarihi</h3>
+                    }
                 </article>
             </section>
         </div>
