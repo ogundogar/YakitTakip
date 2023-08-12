@@ -11,12 +11,28 @@ namespace YakitTakip.Controllers
         {
             _personelWriteRepository = personelWriteRepository;
         }
-        public  IActionResult Index(IFormCollection personel)
+        public IActionResult Index()
+        {
+            return View();
+        }
+        public  IActionResult Ekle(IFormCollection personel)
         {
            _personelWriteRepository.AddAsync(new()
             { Ad = personel["ad"].ToString(), Soyad = personel["soyad"].ToString(), TelefonNo = personel["telefon"].ToString(), AktifMi = true, IlkKayitTarihi = DateTime.Now }
             );
            _personelWriteRepository.SaveAsync();
+            return View();
+        }
+        public IActionResult Guncelleme(TbPersonel personel)
+        {
+            _personelWriteRepository.Update(personel);
+            _personelWriteRepository.SaveAsync();
+            return View();
+        }
+        public IActionResult Sil(TbPersonel personel)
+        {
+            _personelWriteRepository. Remove(personel);
+            _personelWriteRepository.SaveAsync();
             return View();
         }
     }

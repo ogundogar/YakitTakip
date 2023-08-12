@@ -15,10 +15,13 @@ namespace YakitTakip.Controllers
         {
             return View(_personelReadRepository.GetAll());
         }
-        public IActionResult Detay(IFormCollection personel)
+        public IActionResult Detay(int id)
         {
-            
-            return View(_personelReadRepository.GetWhere(p => p.Id == personel["id"]));
+            return View(_personelReadRepository.GetWhere(p => p.Id == id));
+        }
+        public IActionResult Guncelleme(int id)
+        {
+            return View(_personelReadRepository.GetWhere(p => p.Id == id));
         }
     }
 }

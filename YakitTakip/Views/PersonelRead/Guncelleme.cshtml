@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IQueryable<YakitTakip.Models.TbPersonel>
+<main>
+    <h3>Personel</h3>
+    <div class="container">
+        <div class="row">
+            <div class="bg-danger col-md-3 col-sm-12">
+                @Html.Partial("../Shared/PartialViews/aside")
+            </div>
+            <section class="col-md-9 col-sm-12">
+                <article>
+                    <form action="/PersonelWrite/Guncelleme" method="post">
+                        @foreach (var item in Model)
+                        {
+                            <label for="id">ID:</label><br>
+                            <input type="text" id="id" name="id" value="@item.Id"><br><br>
+
+                            <label for="ad">Ad:</label><br>
+                            <input type="text" id="ad" name="ad" value="@item.Ad"><br><br>
+                           
+                            <label for="soyad">Soyad:</label><br>
+                            <input type="text" id="soyad" name="soyad" value="@item.Soyad"><br><br>
+                           
+                            <label for="telefon">Telefon Numarası:</label><br>
+                            <input type="text" id="telefon" name="telefon" value="@item.TelefonNo"> <br><br>
+
+                            <label for="aktifmi">Aktif Mi:</label><br>
+                            <input type="checkbox" id="aktifmi" name="aktifmi" value="@item.AktifMi" ><br><br>
+                            
+                            <label for="ilkKayitTarihi">İlk Kayıt Tarihi:</label><br>
+                            <input type="datetime" id="ilkKayitTarihi" name="ilkKayitTarihi" value="@item.IlkKayitTarihi"><br><br>
+                           
+                            <label for="sonKayitTarihi">Son Kayıt Tarihi:</label><br>
+                            <input type="datetime" id="sonKayitTarihi" name="sonKayitTarihi" value="@item?.SonKayitTarihi"><br><br>
+
+                            <button type="submit" class="btn btn-warning"> Güncelle </button>
+                        }
+                    </form>
+                </article>
+            </section>
+        </div>
+    </div>
+</main>

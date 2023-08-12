@@ -28,12 +28,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxSZWFkXERldGF5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/PersonelRead/Guncelleme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxSZWFkXEd1bmNlbGxlbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/PersonelRead/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxSZWFkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/PersonelWrite/Ekle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxXcml0ZVxFa2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/PersonelWrite/Guncelleme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxXcml0ZVxHdW5jZWxsZW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/PersonelWrite/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxXcml0ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/PersonelWrite/Sil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxXcml0ZVxTaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/Shared/PartialViews/aside.cshtml]

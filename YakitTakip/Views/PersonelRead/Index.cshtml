@@ -30,9 +30,18 @@
                                     <td>@item.IlkKayitTarihi</td>
                                     <td>@item.SonKayitTarihi</td>
                                     <td>
-                                        <button type="button" class="btn btn-danger">Sil</button>
-                                        <button type="button" class="btn btn-warning">Güncelle</button>
-                                        <a class="btn btn-primary" asp-action="Detay" asp-route-itemid="@item.Id">Detay</a>
+                                    <form method="post" action="/PersonelRead/Detay">
+                                            <input type="hidden" name="id" value="@item.Id">
+                                            <button type="submit" class="btn btn-primary"> Detay </button>
+                                    </form>
+                                    <form method="post" action="/PersonelRead/Guncelleme">
+                                            <input type="hidden" name="id" value="@item.Id">
+                                            <button type="submit" class="btn btn-warning"> Güncelleme </button>
+                                    </form>
+                                    <form method="post" action="/PersonelWrite/Sil">
+                                            <input type="hidden" name="id" value="@item.Id">
+                                            <button type="submit" class="btn btn-danger"> Sil </button>
+                                    </form> 
                                     </td>
                                 </tr>
                             }
