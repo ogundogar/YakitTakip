@@ -2,10 +2,10 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@using YakitTakip.IRepository.Personel
 @model IQueryable<YakitTakip.Models.TbGorev>
 <main>
     <h3>Gorev</h3>
+    <a href="/GorevRead/Ekle" class="btn btn-success"> Görev Ekle </a>
     <div class="container">
         <div class="row">
             <div class="bg-danger col-md-3 col-sm-12">
@@ -18,8 +18,11 @@
                             <td>Personel Adı</td>
                             <td>Personel Soyadı</td>
                             <td>Araç Plakası</td>
+                            <td>Açıklama</td>
                             <td>Gorev Başlanğıç  Tarihi</td>
                             <td>Gorev Sonu Tarihi</td>
+                            <td>Gorev Başlanğıç  Km</td>
+                            <td>Gorev Bitiş Km</td>
                         </tr>
                         @{
                             foreach (var item in Model)
@@ -28,11 +31,25 @@
                                     <td>@item.Personel.Ad</td>
                                     <td>@item.Personel.Soyad</td>
                                     <td>@item.Arac.Plaka</td>
+                                    <td>@item.Aciklama</td>
                                     <td>@item.GorevBaslangicTarihi</td>
                                     <td>@item.GorevSonuTarihi</td>
+                                    <td>@item.BaslangicKm</td>
+                                    <td>@item.BitisKm</td>
+                                    
                                     <td>
-                                        <button type="button" class="btn btn-danger">Sil</button>
-                                        <button type="button" class="btn btn-warning">Güncelle</button>
+                                        <form method="post" action="/GorevRead/Detay">
+                                            <input type="hidden" name="id" value="@item.Id">
+                                            <button type="submit" class="btn btn-primary"> Detay </button>
+                                        </form>
+                                        <form method="post" action="/GorevRead/Guncelleme">
+                                            <input type="hidden" name="id" value="@item.Id">
+                                            <button type="submit" class="btn btn-warning"> Güncelleme </button>
+                                        </form>
+                                        <form method="post" action="/GorevWrite/Sil">
+                                            <input type="hidden" name="id" value="@item.Id">
+                                            <button type="submit" class="btn btn-danger"> Sil </button>
+                                        </form>
                                     </td>
                                 </tr>
                             }

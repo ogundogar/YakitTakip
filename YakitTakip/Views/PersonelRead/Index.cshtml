@@ -1,10 +1,11 @@
-﻿@{
+﻿﻿@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @model IQueryable<YakitTakip.Models.TbPersonel>
 <main>
     <h3>Personel</h3>
+    <a href="/PersonelRead/Ekle" class="btn btn-success"> Personel Ekle </a>
     <div class="container">
         <div class="row">
             <div class="bg-danger col-md-3 col-sm-12">
@@ -30,18 +31,18 @@
                                     <td>@item.IlkKayitTarihi</td>
                                     <td>@item.SonKayitTarihi</td>
                                     <td>
-                                    <form method="post" action="/PersonelRead/Detay">
+                                        <form method="post" action="/PersonelRead/Detay">
                                             <input type="hidden" name="id" value="@item.Id">
                                             <button type="submit" class="btn btn-primary"> Detay </button>
-                                    </form>
-                                    <form method="post" action="/PersonelRead/Guncelleme">
+                                        </form>
+                                        <form method="post" action="/PersonelRead/Guncelleme">
                                             <input type="hidden" name="id" value="@item.Id">
                                             <button type="submit" class="btn btn-warning"> Güncelleme </button>
-                                    </form>
-                                    <form method="post" action="/PersonelWrite/Sil">
+                                        </form>
+                                        <form method="post" action="/PersonelWrite/Sil">
                                             <input type="hidden" name="id" value="@item.Id">
                                             <button type="submit" class="btn btn-danger"> Sil </button>
-                                    </form> 
+                                        </form>
                                     </td>
                                 </tr>
                             }

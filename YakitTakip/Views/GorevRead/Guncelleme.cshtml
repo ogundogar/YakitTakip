@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IQueryable<YakitTakip.Models.TbGorev>
+<main>
+    <h3>Personel</h3>
+    <div class="container">
+        <div class="row">
+            <div class="bg-danger col-md-3 col-sm-12">
+                @Html.Partial("../Shared/PartialViews/aside")
+            </div>
+            <section class="col-md-9 col-sm-12">
+                <article>
+                    <form action="/GorevWrite/Guncelleme" method="post">
+                        <label for="personel">Personel:</label><br>
+                        @await Component.InvokeAsync("Personel")<br/>
+                        <label for="arac">Araç:</label><br>
+                        @await Component.InvokeAsync("Arac")<br />
+                       
+                        @foreach (var item in Model)
+                        {
+                            <input type="hidden" id="id" name="id" value="@item.Id">
+                            
+                            <label for="baslangicTarihi">Görev Başlangıç Tarihi:</label><br>
+                            <input type="datetime" id="baslangicTarihi" name="baslangicTarihi" value="@item.GorevBaslangicTarihi"><br><br>
+
+                            <label for="sonuTarihi">Görev Sonu Tarihi:</label><br>
+                            <input type="datetime" id="sonuTarihi" name="sonuTarihi" value="@item.GorevSonuTarihi"><br><br>
+                           
+                            <label for="baslangicKm">Görev Başlangıç Tarihi:</label><br>
+                            <input type="datetime" id="baslangicKm" name="baslangicKm" value="@item.BaslangicKm"><br><br>
+
+                            <label for="bitisKm">Görev Sonu Tarihi:</label><br>
+                            <input type="datetime" id="bitisKm" name="bitisKm" value="@item.BitisKm"><br><br>
+
+                            <button type="submit" class="btn btn-warning"> Güncelle </button>
+                        }
+                    </form>
+                </article>
+            </section>
+        </div>
+    </div>
+</main>

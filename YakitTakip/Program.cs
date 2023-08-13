@@ -17,6 +17,9 @@ builder.Services.AddDbContext<DbYakitTakipContext>();
 builder.Services.AddScoped<IPersonelReadRepository,PersonelReadRepository>();
 builder.Services.AddScoped<IGorevReadRepository, GorevReadRepository>();
 builder.Services.AddScoped<IPersonelWriteRepository, PersonelWriteRepository>();
+builder.Services.AddScoped<IGorevWriteRepository, GorevWriteRepository>();
+builder.Services.AddScoped<IAracReadRepository, AracReadRepository>();
+builder.Services.AddScoped<IAracWriteRepository, AracWriteRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -16,8 +16,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\Arksoft Proje\YakitTakip\YakitTakip
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/Gorev/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29yZXZcSW5kZXguY3NodG1s
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/GorevRead/Detay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29yZXZSZWFkXERldGF5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/GorevRead/Ekle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29yZXZSZWFkXEVrbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/GorevRead/Guncelleme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29yZXZSZWFkXEd1bmNlbGxlbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/GorevRead/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29yZXZSZWFkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/GorevWrite/Ekle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29yZXZXcml0ZVxFa2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/GorevWrite/Guncelleme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29yZXZXcml0ZVxHdW5jZWxsZW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/GorevWrite/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29yZXZXcml0ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/GorevWrite/Sil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29yZXZXcml0ZVxTaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/Home/Index.cshtml]
@@ -26,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/PersonelRead/Detay.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxSZWFkXERldGF5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/PersonelRead/Ekle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxSZWFkXEVrbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/PersonelRead/Guncelleme.cshtml]
@@ -52,8 +84,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxXcml0ZVxTaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/Shared/Components/Arac/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQXJhY1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/Shared/Components/Personel/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUGVyc29uZWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/Shared/PartialViews/aside.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xhc2lkZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/Shared/PartialViews/PersonelSelect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xQZXJzb25lbFNlbGVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/Desktop/Arksoft Proje/YakitTakip/YakitTakip/Views/Shared/PartialViews/section.cshtml]

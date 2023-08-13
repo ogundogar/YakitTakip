@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using YakitTakip.IRepository.Personel;
 using YakitTakip.Models;
+using YakitTakip.Repository.Personel;
 
 namespace YakitTakip.Controllers
 {
@@ -14,6 +15,10 @@ namespace YakitTakip.Controllers
         public IActionResult Index()
         {
             return View(_personelReadRepository.GetAll());
+        }
+        public IActionResult Ekle()
+        {
+            return View();
         }
         public IActionResult Detay(int id)
         {

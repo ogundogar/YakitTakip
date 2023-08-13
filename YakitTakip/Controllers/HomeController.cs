@@ -11,7 +11,7 @@ namespace YakitTakip.Controllers
         {
             var personel = _context.TbPersonels.ToList();
             ViewBag.ornek = "Personel";
-            return View(personel);
+            return View();
         }
 
     }

@@ -1,0 +1,8 @@
+﻿@model IQueryable<YakitTakip.Models.TbArac>
+
+<select name="arac" id="arac">
+    @foreach (var item in Model)
+    {
+     <option value="@item.Id">@item.Plaka</option>
+    }
+ </select>
