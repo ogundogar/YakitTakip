@@ -2,10 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using YakitTakip.IRepository.Personel;
 using YakitTakip.Models;
+using YakitTakip.Repository.Personel;
 
 namespace YakitTakip.Controllers.API
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/{action}")]
     [ApiController]
     public class PersonelApiController : ControllerBase
     {
@@ -14,16 +15,15 @@ namespace YakitTakip.Controllers.API
         {
             _personelReadRepository = personelReadRepository;
         }
-        //[HttpGet]
-        //public IQueryable<TbPersonel> Get()
-        //{
-        //    return _personelReadRepository.GetWhere(p => p.Ad == "Nihat");
-        //}
         [HttpGet]
-        public IQueryable<TbPersonel> Get()
+        public IQueryable<TbPersonel> Personel()
         {
             return _personelReadRepository.GetAll();
+        } 
+        [HttpGet("{id}")]
+        public IQueryable<TbPersonel> Personel(int id)
+        {
+            return _personelReadRepository.GetWhere(p => p.Id == id);
         }
-
     }
 }

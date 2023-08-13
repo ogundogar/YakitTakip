@@ -23,9 +23,10 @@ namespace YakitTakip.Controllers
            _personelWriteRepository.SaveAsync();
             return View();
         }
-        public IActionResult Guncelleme(TbPersonel personel)
+        public IActionResult Guncelleme(IFormCollection personel)
         {
-            _personelWriteRepository.Update(personel);
+            _personelWriteRepository.Update(new()
+            {Id=int.Parse(personel["id"]), Ad = personel["ad"].ToString(), Soyad = personel["soyad"].ToString(), TelefonNo = personel["telefon"].ToString(), IlkKayitTarihi = DateTime.Parse(personel["ilkKayitTarihi"]), SonKayitTarihi = DateTime.Parse(personel["sonKayitTarihi"]) });
             _personelWriteRepository.SaveAsync();
             return View();
         }

@@ -28,13 +28,13 @@
                             <input type="text" id="telefon" name="telefon" value="@item.TelefonNo"> <br><br>
 
                             <label for="aktifmi">Aktif Mi:</label><br>
-                            <input type="checkbox" id="aktifmi" name="aktifmi" value="@item.AktifMi" ><br><br>
+                            <input type="checkbox" id="aktifmi" name="aktifmi" value=@item.AktifMi ><br><br>
                             
                             <label for="ilkKayitTarihi">İlk Kayıt Tarihi:</label><br>
                             <input type="datetime" id="ilkKayitTarihi" name="ilkKayitTarihi" value="@item.IlkKayitTarihi"><br><br>
                            
                             <label for="sonKayitTarihi">Son Kayıt Tarihi:</label><br>
-                            <input type="datetime" id="sonKayitTarihi" name="sonKayitTarihi" value="@item?.SonKayitTarihi"><br><br>
+                            <input type="datetime" id="sonKayitTarihi" name="sonKayitTarihi" value="@item.SonKayitTarihi"><br><br>
 
                             <button type="submit" class="btn btn-warning"> Güncelle </button>
                         }
