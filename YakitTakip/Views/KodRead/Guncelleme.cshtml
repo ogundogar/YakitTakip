@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IQueryable<YakitTakip.Models.TbKod>
+<main>
+    <h3>Kod</h3>
+    <div class="container">
+        <div class="row">
+            <div class="bg-danger col-md-3 col-sm-12">
+                @Html.Partial("../Shared/PartialViews/aside")
+            </div>
+            <section class="col-md-9 col-sm-12">
+                <article>
+                    <form action="/KodWrite/Guncelleme" method="post">
+                        @foreach (var item in Model)
+                        {
+                            <label for="id">ID:</label><br>
+                            <input type="text" id="id" name="id" value="@item.Id"><br><br>
+
+                            <label for="ad">Ad:</label><br>
+                            <input type="text" id="ad" name="ad" value="@item.Ad"><br><br>
+                           
+                            <label for="UstKodId">UstKodId:</label><br>
+                            <input type="text" id="UstKodId" name="UstKodId" value="@item.UstKodId"><br><br>
+                           
+                            <label for="SiraNo">Telefon Numarası:</label><br>
+                            <input type="text" id="SiraNo" name="SiraNo" value="@item.SiraNo"> <br><br>
+                           
+                            <label for="Aciklama">Aciklama:</label><br>
+                            <input type="text" id="Aciklama" name="Aciklama" value="@item.Aciklama"><br><br>
+
+                            <button type="submit" class="btn btn-warning"> Güncelle </button>
+                        }
+                    </form>
+                </article>
+            </section>
+        </div>
+    </div>
+</main>

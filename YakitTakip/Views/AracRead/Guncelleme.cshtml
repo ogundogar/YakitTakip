@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IQueryable<YakitTakip.Models.TbArac>
+<main>
+    <h3>Araç Ekle</h3>
+    <div class="container">
+        <div class="row">
+            <div class="bg-danger col-md-3 col-sm-12">
+                @Html.Partial("../Shared/PartialViews/aside")
+            </div>
+            <section class="col-md-9 col-sm-12">
+                <article>
+                    <form action="/AracWrite/Guncelleme" method="post">
+                        
+                        <label for="MarkaKodId">Marka:</label><br>
+                        @await Component.InvokeAsync("KodMarka")<br /><br />
+
+                        <label for="ModelKodId">Model:</label><br>
+                        @await Component.InvokeAsync("KodModel")<br /><br />
+
+                        <label for="VitesKodId">Vites:</label><br>
+                        @await Component.InvokeAsync("KodVites")<br /><br />
+
+                        <label for="YakitTipiKodId">Yakıt:</label><br>
+                        @await Component.InvokeAsync("KodYakit")<br /><br />
+
+                        
+                        @foreach (var item in Model)
+                        {
+                            <input type="hidden" id="id" name="id" value="@item.Id">
+
+                            <label for="Plaka">Plaka:</label><br>
+                        <input type="text" id="Plaka" name="Plaka" value="@item.Plaka"><br>
+
+                        @*<label for="MuayeneDurumu">MuayeneDurumu:</label><br>
+                        <input type="text" id="MuayeneDurumu" name="MuayeneDurumu" value="@item.MuayeneDurumu"><br><br>*@
+
+                        <label for="MuayeneGecerlilikTarihi">Muayene Geçerlilik Tarihi:</label><br>
+                        <input type="text" id="MuayeneGecerlilikTarihi" name="MuayeneGecerlilikTarihi" value="@item.MuayeneGecerlilikTarihi"><br><br>
+
+                        <label for="Km">Km:</label><br>
+                        <input type="text" id="Km" name="Km" value="@item.Km"><br><br>
+
+                        <label for="MotorGucu">Motor Gücü:</label><br>
+                        <input type="text" id="MotorGucu" name="MotorGucu" value="@item.MotorGucu"><br><br>
+
+                        <label for="MotorHacmi">Motor Hacmi:</label><br>
+                        <input type="text" id="MotorHacmi" name="MotorHacmi" value="@item.MotorHacmi"><br><br>
+
+                        @*<label for="AktifMi">Aktif Mi:</label><br>
+                        <input type="text" id="AktifMi" name="AktifMi" value="@item.AktifMi"><br><br>*@
+                            
+                        <input type="submit" value="Submit">
+                        }
+
+                        
+                    </form>
+                </article>
+            </section>
+        </div>
+    </div>
+</main>
+
+

@@ -2,11 +2,13 @@ using Microsoft.EntityFrameworkCore;
 using YakitTakip.IRepository;
 using YakitTakip.IRepository.Arac;
 using YakitTakip.IRepository.Gorev;
+using YakitTakip.IRepository.Kod;
 using YakitTakip.IRepository.Personel;
 using YakitTakip.Models;
 using YakitTakip.Repository;
 using YakitTakip.Repository.Arac;
 using YakitTakip.Repository.Gorev;
+using YakitTakip.Repository.Kod;
 using YakitTakip.Repository.Personel;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +22,8 @@ builder.Services.AddScoped<IPersonelWriteRepository, PersonelWriteRepository>();
 builder.Services.AddScoped<IGorevWriteRepository, GorevWriteRepository>();
 builder.Services.AddScoped<IAracReadRepository, AracReadRepository>();
 builder.Services.AddScoped<IAracWriteRepository, AracWriteRepository>();
+builder.Services.AddScoped<IKodReadRepository, KodReadRepository>();
+builder.Services.AddScoped<IKodWriteRepository, KodWriteRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

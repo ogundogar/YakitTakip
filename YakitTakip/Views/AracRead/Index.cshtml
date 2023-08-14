@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IQueryable<YakitTakip.Models.TbArac>
+<main>
+    <h3>Araçlar</h3>
+    <a href="/AracRead/Ekle" class="btn btn-success"> Araç Ekle </a>
+    <div class="container">
+        <div class="row">
+            <div class="bg-danger col-md-3 col-sm-12">
+                @Html.Partial("../Shared/PartialViews/aside")
+            </div>
+            <section class="col-md-9 col-sm-12">
+                <article>
+                    <table>
+                        <tr>
+                            <td>Plaka</td>
+                            <td>Muayene Durumu</td>
+                            <td>Muayene Geçerlilik Tarihi</td>
+                            <td>Km</td>
+                            <td>Marka</td>
+                            <td>Model</td>
+                            <td>Vites</td>
+                            <td>Yakıt Tipi</td>
+                            <td>Motor Gucu</td>
+                            <td>Motor Hacmi</td>
+                            <td>Aktif Mi</td>
+                        </tr>
+                        @{
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Plaka</td>
+                                    <td>@item.MuayeneDurumu</td>
+                                    <td>@item.MuayeneGecerlilikTarihi</td>
+                                    <td>@item.Km</td>
+                                    <td>@item.MarkaKod.Ad</td>
+                                    <td>@item.ModelKod.Ad</td>
+                                    <td>@item.VitesKod.Ad</td>
+                                    <td>@item.YakitTipiKod.Ad</td>
+                                    <td>@item.MotorGucu</td>
+                                    <td>@item.MotorHacmi</td>
+                                    <td>@item.AktifMi</td>
+
+                                    <td>
+                                        <form method="post" action="/AracRead/Detay">
+                                            <input type="hidden" name="id" value="@item.Id">
+                                            <button type="submit" class="btn btn-primary"> Detay </button>
+                                        </form>
+                                        <form method="post" action="/AracRead/Guncelleme">
+                                            <input type="hidden" name="id" value="@item.Id">
+                                            <button type="submit" class="btn btn-warning"> Güncelleme </button>
+                                        </form>
+                                        <form method="post" action="/AracWrite/Sil">
+                                            <input type="hidden" name="id" value="@item.Id">
+                                            <button type="submit" class="btn btn-danger"> Sil </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </table>
+                </article>
+            </section>
+        </div>
+    </div>
+</main>

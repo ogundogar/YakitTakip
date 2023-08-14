@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IQueryable<YakitTakip.Models.TbArac>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="bg-danger col-md-3 col-sm-12">
+                @Html.Partial("../Shared/PartialViews/aside")
+            </div>
+            <section class="col-md-9 col-sm-12">
+                <article>
+                    @foreach (var item in Model)
+                    {
+                        <h1>Plaka: @item.Plaka </h1>
+
+                        <br />
+                        <h2>Marka: @item.MarkaKod.Ad</h2>
+                        <h2>Model: @item.ModelKod.Ad</h2>
+                        <br />
+                        <h3>Vites : @item.VitesKod.Ad</h3>
+                        <h3>Yakıt : @item?.YakitTipiKod.Ad</h3>
+                        <br/>
+                        <h3>Muayene Durumu : @item?.MuayeneDurumu</h3>
+                        <h3>Muayene Geçerlilik Tarihi : @item?.MuayeneGecerlilikTarihi</h3>
+                    }
+                </article>
+            </section>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,54 @@
+﻿﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IQueryable<YakitTakip.Models.TbKod>
+<main>
+    <h3>Kod</h3>
+    <a href="/KodRead/Ekle" class="btn btn-success"> Kod Ekle </a>
+    <div class="container">
+        <div class="row">
+            <div class="bg-danger col-md-3 col-sm-12">
+                @Html.Partial("../Shared/PartialViews/aside")
+            </div>
+            <section class="col-md-9 col-sm-12">
+                <article>
+                    <table>
+                        <tr>
+                            <td>AD</td>
+                            <td>Ust Kod Id</td>
+                            <td>Sıra No</td>
+                            <td>Açıklama</td>
+
+                        </tr>
+                        @{
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Ad</td>
+                                    <td>@item.UstKodId</td>
+                                    <td>@item.SiraNo</td>
+                                    <td>@item.Aciklama</td>
+                                    <td>
+                                        <form method="post" action="/KodRead/Detay">
+                                            <input type="hidden" name="id" value="@item.Id">
+                                            <button type="submit" class="btn btn-primary"> Detay </button>
+                                        </form>
+                                        <form method="post" action="/KodRead/Guncelleme">
+                                            <input type="hidden" name="id" value="@item.Id">
+                                            <button type="submit" class="btn btn-warning"> Güncelleme </button>
+                                        </form>
+                                        <form method="post" action="/KodWrite/Sil">
+                                            <input type="hidden" name="id" value="@item.Id">
+                                            <button type="submit" class="btn btn-danger"> Sil </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </table>
+                </article>
+            </section>
+        </div>
+    </div>
+</main>

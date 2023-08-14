@@ -13,8 +13,11 @@
             <section class="col-md-9 col-sm-12">
                 <article>
                     <form action="/GorevWrite/Guncelleme" method="post">
+                        
                         <label for="personel">Personel:</label><br>
                         @await Component.InvokeAsync("Personel")<br/>
+                        
+                        
                         <label for="arac">Araç:</label><br>
                         @await Component.InvokeAsync("Arac")<br />
                        
